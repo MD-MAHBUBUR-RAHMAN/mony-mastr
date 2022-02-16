@@ -37,5 +37,5 @@ document.getElementById("calculate").addEventListener("click", function () {
     const balanceInnerText = document.getElementById("balance");
     balanceInnerText.innerText = parseInt(income) - totalExpenses
     const balanceTotal = parseInt(balanceInnerText.innerText);
-    console.log(typeof balanceTotal, "balance")
+    // console.log(typeof balanceTotal, "balance")
 })
