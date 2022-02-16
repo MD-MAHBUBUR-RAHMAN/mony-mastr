@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Your Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header Peart -->
+    <header>
+        <h1 class="text-center text-4xl font-bold text-teal-700 mt-10 mb-5">Manage Your Money</h1>
+    </header>
+    <!-- Main Section -->
+    <section class="lg:grid grid-cols-2 gap-10 p-12">
+        <!-- Image part -->
+        <div>
+            <img src="./img/rupixen-com-EsH_VBiZhVA-unsplash.jpg" alt="">
+        </div>
+        <!-- Calculation area -->
+        <div class="text-center bg-slate-100">
+            <!-- income area -->
+            <div class="">
+                <h2 class=" text-2xl text-teal-400 mt-10 mb-5">Income</h2>
+                <div>
+                    <p class="font-bold text-fuchsia-600 inline mr-5">Income:</p><input id="income" type="text"
+                        value="00" id="income">
+                </div>
+            </div>
+            <!-- Expenditure Area -->
+            <div>
+                <h2 class=" text-2xl text-teal-400 my-5">Expenses</h2>
+                <div class="mb-2">
+                    <p class="font-bold text-fuchsia-600 inline mr-5">Food:</p><input class=" " type="text" name=""
+                        id="food">
+                </div>
+                <div class="mb-2">
+                    <p class="font-bold text-fuchsia-600 inline mr-6">Rent:</p><input class=" " type="text" name=""
+                        id="rent">
+                </div>
+                <div class="mb-2">
+                    <p class="font-bold text-fuchsia-600 inline mr-2">Clothes:</p><input class=" " type="text" name=""
+                        id="cloth">
+                </div>
+                <!-- Expenditure Button Area -->
+                <button id="calculate" class="bg-sky-500 font-bold px-8 pb-2 pt-2 rounded ">Calculate</button>
+                <h2 class=" text-2xl  text-teal-400 mt-5">Total Expense: <span id="total-expense"
+                        class="text-slate-700">000</span></h2>
+                <h2 class=" text-2xl text-teal-400 my-5">Balance: <span id="balance" class="text-slate-700">000</span>
+                </h2>
+            </div>
+            <!-- Saving Area -->
+            <div>
+                <span class="font-bold text-fuchsia-600 mr-5">Save: </span><input class="" type="text" name=""
+                    id="save-percent">
+                <span class="ml-3 inline-block mt-5"> % </span><button id="save "
+                    class="text-1xl bg-sky-500 font-bold px-8 py-2 rounded ml-5 ">Save</button>
+                <h2 class=" text-2xl text-teal-400 mt-5 mb-2">Saving Amount: <span id="save-Amount"
+                        class="text-slate-700">000</span></h2>
+                <h2 class=" text-2xl text-teal-400 mb-5">remaining Balance: <span id="remaing-balance"
+                        class="text-slate-700">000</span></h2>
+            </div>
+        </div>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
