@@ -12,7 +12,7 @@
 <body>
     <!-- header Peart -->
     <header>
-        <h1 class="text-center text-4xl font-bold text-teal-700 mt-10 mb-5">Manage Your Money</h1>
+        <h1 class="text-center md:text-4xl font-bold text-teal-700 mt-10 md:mb-5">Manage Your Money</h1>
     </header>
     <!-- Main Section -->
     <section class="lg:grid grid-cols-2 gap-10 p-12">
@@ -23,12 +23,17 @@
         <!-- Calculation area -->
         <div class="text-center bg-slate-100">
             <!-- income area -->
-            <div class="">
+            <div>
                 <h2 class=" text-2xl text-teal-400 mt-10 mb-5 underline underline-offset-1">Income</h2>
                 <div>
                     <p class="font-bold text-fuchsia-600 inline mr-5">Income:</p>
                     <input id="income" type="text" class="rounded text-center text-blue-600 font-medium">
                 </div>
+                <p id="correction"
+                    class="text-left text-semi-bold text-rose-500 bg-neutral-500 rounded absolut hidden mt-5 lg:p-1">
+                    Please Input positive value and fill the input with at least 0. <button
+                        onClick="window.location.reload()" class="p-2 text-fuchsia-700 bg-sky-300 rounded">x</button>
+                </p>
             </div>
             <!-- Expenditure Area -->
             <div>
@@ -48,20 +53,20 @@
                 <!--Total Expense, Balance And Button Area -->
                 <button id="calculate" class="bg-sky-500 font-bold px-8 pb-2 pt-2 rounded ">Calculate</button>
                 <h2 class=" text-2xl  text-teal-400 mt-5">Total Expense: <span id="total-expense"
-                        class="text-slate-700">000</span></h2>
-                <h2 class=" text-2xl text-teal-400 my-5">Balance: <span id="balance" class="text-slate-700">000</span>
+                        class="text-slate-700">0</span></h2>
+                <h2 class=" text-2xl text-teal-400 my-5">Balance: <span id="balance" class="text-slate-700">0</span>
                 </h2>
             </div>
             <!-- Saving Area -->
             <div>
-                <span class="font-bold text-fuchsia-600 mr-5">Save: </span><input
+                <span id="save-percentage" class="font-bold text-fuchsia-600 mr-5">Save Amount: </span><input
                     class="rounded text-center text-blue-600 font-medium" type="text" name="" id="save-percent">
-                <span class="ml-3 inline-block mt-5"> % </span><button id="save "
+                <span class="ml-3 inline-block mt-5"> % </span><button id="save"
                     class="text-1xl bg-sky-500 font-bold px-8 py-2 rounded ml-5 ">Save</button>
                 <h2 class=" text-2xl text-teal-400 mt-5 mb-2">Saving Amount: <span id="save-Amount"
-                        class="text-slate-700">000</span></h2>
-                <h2 class=" text-2xl text-teal-400 mb-5">remaining Balance: <span id="remaing-balance"
-                        class="text-slate-700">000</span></h2>
+                        class="text-slate-700">0</span></h2>
+                <h2 class=" text-2xl text-teal-400 mb-5">Remaining Balance: <span id="remaing-balance"
+                        class="text-slate-700">0</span></h2>
             </div>
         </div>
     </section>

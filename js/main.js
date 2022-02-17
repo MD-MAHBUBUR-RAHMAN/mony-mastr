@@ -1,11 +1,17 @@
 //Common Input Function:
 function commonInput(inputId) {
     const inputItem = document.getElementById(inputId);
-    const inputValue = inputItem.value;
-    inputItem.value = inputValue;
-    const finalValue = inputItem.value;
-    //return function
-    return finalValue;
+    if (inputItem.value < 0 || inputItem.value == "") {
+        document.getElementById("correction").style.display = "block"
+    }
+    else {
+        const inputValue = inputItem.value;
+        inputItem.value = inputValue;
+        const finalValue = parseInt(inputItem.value);
+        //return function
+        return finalValue;
+    }
+
 }
 
 //Main Calculation Part:
@@ -20,11 +26,32 @@ document.getElementById("calculate").addEventListener("click", function () {
     const clothExpense = commonInput("cloth");
     //Total Expenses:========================
     const totalInnerText = document.getElementById("total-expense");
-    totalInnerText.innerText = parseInt(foodExpense) + parseInt(rentExpense) + parseInt(clothExpense);
+    totalInnerText.innerText = foodExpense + rentExpense + clothExpense;
     const totalExpenses = parseInt(totalInnerText.innerText);
     //Balance Amount:========================================
     const balanceInnerText = document.getElementById("balance");
-    balanceInnerText.innerText = parseInt(income) - totalExpenses
+    balanceInnerText.innerText = income - totalExpenses
     const balanceTotal = parseInt(balanceInnerText.innerText);
-    // console.log(typeof balanceTotal, "balance")
+    //Excess Cost Velidation
+    if (balanceTotal < totalExpenses) {
+        balanceInnerText.innerText = "Expense Exceded Your Balance"
+        totalInnerText.innerText = "Reduce Your Expense,Please!"
+    }
+    //saving amount:
+    document.getElementById("save").addEventListener("click", function () {
+        const income = commonInput("income");
+        const savePercentage = document.getElementById("save-percent").value;
+        const savingAmount = (income / 100) * savePercentage;
+        //saving Amount
+        const saveMoney = document.getElementById("save-Amount");
+        saveMoney.innerText = savingAmount;
+        const saveTotal = saveMoney.innerText;
+        //remaining Amount
+        const remaining = document.getElementById("remaing-balance");
+        remaining.innerText = balanceTotal - parseInt(saveTotal);
+
+
+    })
+
+
 })
