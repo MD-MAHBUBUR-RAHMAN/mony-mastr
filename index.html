@@ -21,51 +21,56 @@
             <img src="./img/rupixen-com-EsH_VBiZhVA-unsplash.jpg" alt="">
         </div>
         <!-- Calculation area -->
-        <div class="text-center bg-slate-100">
+        <div class="text-center bg-slate-100 static">
             <!-- income area -->
             <div>
-                <h2 class=" text-2xl text-teal-400 mt-10 mb-5 underline underline-offset-1">Income</h2>
+                <h2 class=" md:text-2xl text-teal-400 mt-10 mb-5 underline underline-offset-1">Income</h2>
                 <div>
-                    <p class="font-bold text-fuchsia-600 inline mr-5">Income:</p>
-                    <input id="income" type="text" class="rounded text-center text-blue-600 font-medium">
+                    <p class="md:font-bold text-fuchsia-600 inline mr-5">Income:</p>
+                    <input id="income" type="text"
+                        class="rounded text-center text-blue-600 font-medium w-5/6 md:w-auto">
                 </div>
                 <p id="correction"
-                    class="text-left text-semi-bold text-rose-500 bg-neutral-500 rounded absolut hidden mt-5 lg:p-1">
+                    class="text-left text-semi-bold text-rose-500 bg-neutral-500 rounded absolut hidden lg:p-1">
                     Please Input positive value and fill the input with at least 0. <button
                         onClick="window.location.reload()" class="p-2 text-fuchsia-700 bg-sky-300 rounded">x</button>
                 </p>
             </div>
             <!-- Expenditure Area -->
             <div>
-                <h2 class=" text-2xl text-teal-400 my-5 underline underline-offset-1">Expenses</h2>
+                <h2 class=" md:text-2xl text-teal-400 my-5 underline underline-offset-1">Expenses</h2>
                 <div class="mb-2">
-                    <p class="font-bold text-fuchsia-600 inline mr-5">Food:</p><input
-                        class="rounded text-center text-blue-600 font-medium" type="text" name="" id="food">
+                    <p class="md:font-bold text-fuchsia-600 inline mr-5">Food:</p><input
+                        class="rounded text-center text-blue-600 font-medium w-5/6 md:w-auto" type="text" name=""
+                        id="food">
                 </div>
                 <div class="mb-2">
-                    <p class="font-bold text-fuchsia-600 inline mr-6">Rent:</p><input
-                        class="rounded text-center text-blue-600 font-medium" type="text" name="" id="rent">
+                    <p class="md:font-bold text-fuchsia-600 inline mr-6">Rent:</p><input
+                        class="rounded text-center text-blue-600 font-medium w-5/6 md:w-auto" type="text" name=""
+                        id="rent">
                 </div>
                 <div class="mb-2">
-                    <p class="font-bold text-fuchsia-600 inline mr-2">Clothes:</p><input
-                        class="rounded text-center text-blue-600 font-medium" type="text" name="" id="cloth">
+                    <p class="md:font-bold text-fuchsia-600 inline mr-2">Clothes:</p><input
+                        class="rounded text-center text-blue-600 font-medium w-5/6 md:w-auto" type="text" name=""
+                        id="cloth">
                 </div>
                 <!--Total Expense, Balance And Button Area -->
                 <button id="calculate" class="bg-sky-500 font-bold px-8 pb-2 pt-2 rounded ">Calculate</button>
-                <h2 class=" text-2xl  text-teal-400 mt-5">Total Expense: <span id="total-expense"
+                <h2 class=" md:text-2xl  text-teal-400 mt-5">Total Expense: <span id="total-expense"
                         class="text-slate-700">0</span></h2>
-                <h2 class=" text-2xl text-teal-400 my-5">Balance: <span id="balance" class="text-slate-700">0</span>
+                <h2 class=" md:text-2xl text-teal-400 my-5">Balance: <span id="balance" class="text-slate-700">0</span>
                 </h2>
             </div>
             <!-- Saving Area -->
             <div>
-                <span id="save-percentage" class="font-bold text-fuchsia-600 mr-5">Save Amount: </span><input
-                    class="rounded text-center text-blue-600 font-medium" type="text" name="" id="save-percent">
+                <span id="save-percentage" class="md:font-bold text-fuchsia-600 mr-5">Save Amount: </span><input
+                    class="rounded text-center text-blue-600 font-medium w-5/6 md:w-auto" type="text" name=""
+                    id="save-percent">
                 <span class="ml-3 inline-block mt-5"> % </span><button id="save"
                     class="text-1xl bg-sky-500 font-bold px-8 py-2 rounded ml-5 ">Save</button>
-                <h2 class=" text-2xl text-teal-400 mt-5 mb-2">Saving Amount: <span id="save-Amount"
+                <h2 class="md:text-2xl text-teal-400 mt-5 mb-2">Saving Amount: <span id="save-Amount"
                         class="text-slate-700">0</span></h2>
-                <h2 class=" text-2xl text-teal-400 mb-5">Remaining Balance: <span id="remaing-balance"
+                <h2 class=" md:text-2xl text-teal-400 mb-5">Remaining Balance: <span id="remaing-balance"
                         class="text-slate-700">0</span></h2>
             </div>
         </div>
